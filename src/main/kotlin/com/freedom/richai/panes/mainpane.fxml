@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane fx:id="container" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #555555;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.img.load.panes.MainController">
+   <children>
+      <HBox layoutX="30.0" layoutY="14.0" prefHeight="35.0" prefWidth="167.0" spacing="3.0" style="-fx-background-color: #eeeeee;">
+         <children>
+            <Label text="打新基金总数：">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="text_totalPage" text="0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="30.0" layoutY="56.0" spacing="8.0" style="-fx-background-color: #eeeeee;">
+         <children>
+            <Label text="符合条件的：">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="text_filterFund" text="0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="209.0" layoutY="14.0" prefHeight="35.0" prefWidth="167.0" spacing="8.0" style="-fx-background-color: #eeeeee;">
+         <children>
+            <Label text="近期收益：">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="et_earningTime" maxWidth="30.0" />
+            <Label text="月">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="209.0" layoutY="56.0" prefHeight="131.0" prefWidth="167.0" style="-fx-background-color: #eeeeee;">
+         <children>
+            <Label text="筛选key:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ListView fx:id="cb_keyWord" prefHeight="163.0" prefWidth="92.0" />
+         </children>
+         <padding>
+            <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+         </padding>
+      </HBox>
+      <VBox layoutX="565.0" layoutY="22.0" prefHeight="172.0" prefWidth="386.0" spacing="8.0" style="-fx-background-color: #dddddd;">
+         <children>
+            <Label prefWidth="644.0" style="-fx-background-color: #ffffff;" text="条件1：A类 规模 &gt;1亿 &lt;25亿" wrapText="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label prefWidth="644.0" style="-fx-background-color: #ffffff;" text="条件2：股票占比 &lt; 25%" wrapText="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label prefWidth="644.0" style="-fx-background-color: #ffffff;" text="条件3：成立时间 &gt; 4年" wrapText="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label prefWidth="644.0" style="-fx-background-color: #ffffff;" text="条件4：三年夏普比 &gt; 1.9，二年夏普比 &gt; 2，一年夏普比 &gt; 3" wrapText="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label prefWidth="644.0" style="-fx-background-color: #ffffff;" text="条件5：三年标准差 &lt;8，二年标准差 &lt;8，一年标准差 &lt;4.3" wrapText="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label prefWidth="644.0" style="-fx-background-color: #ffffff;" text="排序：按照未上市/股票市值 排序" wrapText="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+         </padding>
+      </VBox>
+      <VBox layoutX="30.0" layoutY="165.0" spacing="16.0">
+         <children>
+            <Label text="基金列表" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+         </children>
+      </VBox>
+      <ScrollPane fx:id="scrollPane" layoutX="30.0" layoutY="205.0" prefHeight="414.0" prefWidth="921.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <FlowPane fx:id="book_container" hgap="8.0" style="-fx-background-color: #454545;" vgap="8.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Button fx:id="btn_TotalPage" layoutX="30.0" layoutY="97.0" mnemonicParsing="false" text="开始" />
+   </children>
+   <padding>
+      <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+   </padding>
+
+</AnchorPane>
